@@ -46,6 +46,7 @@ export default function() {
       });
       return { data: filteredRentals };
     } else {
+      debugger
       return { data: rentals };
     }
   });
