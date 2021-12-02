@@ -10,7 +10,7 @@ export default Model.extend({
     image: DS.attr(),
     bedrooms: DS.attr(),
     description: DS.attr(),
-    price: computed('bedrooms', 'cat', function() {
+    rent: computed('bedrooms', 'cat', function() {
         return "$".concat(+`${this.bedrooms*500+1000}`);
     })
 });
