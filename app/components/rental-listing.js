@@ -1,4 +1,6 @@
 import Component from '@ember/component';
+import EmberObject, { computed } from '@ember/object';
+
 
 export default Component.extend({
     isWide: false,
@@ -6,6 +8,5 @@ export default Component.extend({
         toggleImageSize(){
             this.toggleProperty('isWide');
         }
-    }
-
+    },
 });

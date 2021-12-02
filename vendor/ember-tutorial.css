@@ -40,6 +40,11 @@ p {
  * Button
  */
 
+.plainbutton{
+  display: inline-block;
+}
+
+
 .button {
   padding: 10px 30px 10px;
   text-decoration: none;

@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import EmberObject, { computed } from '@ember/object';
 const { Model } = DS;
 
 export default Model.extend({
@@ -8,5 +9,8 @@ export default Model.extend({
     category: DS.attr(),
     image: DS.attr(),
     bedrooms: DS.attr(),
-    description: DS.attr()
+    description: DS.attr(),
+    price: computed('bedrooms', 'cat', function() {
+        return "$".concat(+`${this.bedrooms*500+1000}`);
+    })
 });

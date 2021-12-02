@@ -1,5 +1,5 @@
 <article class="listing">
-  <a onclick={{action "toggleImageSize"}}
+  <a type="button" {{action "toggleImageSize"}}
         class="image {{if this.isWide "wide"}}"
         role="button">
     <img src={{this.rental.image}} alt="">
@@ -7,7 +7,7 @@
   <div class="details">
     <h3>{{#link-to "rentals.show" rental class=rental.id}}{{this.rental.title}}{{/link-to}}</h3>
     <div class="detail owner">
-      <span>Owner:</span> {{this.rental.owner}}
+      <span>Price:</span> {{this.rental.price}}
     </div>
     <div class="detail type">
       <span>Type:</span> {{rental-property-type this.rental.category}} - {{this.rental.category}}
