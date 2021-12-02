@@ -1,6 +1,8 @@
-<button type="button" role="button" {{action (perform this.waitOneSecond)}}>
-    Load for 1 Second!
+<button class="button" type="button" role="button" {{action (perform this.waitOneSecond)}}>
+    
     {{#if this.waitOneSecond.isRunning}}
         Loading!
+    {{else}}
+        Load for 1 Second!
     {{/if}}
 </button>
