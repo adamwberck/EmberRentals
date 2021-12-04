@@ -6,9 +6,9 @@
   </a>
   <div class="details">
     <h3>{{#link-to "rentals.show" rental class=rental.id}}{{this.rental.title}}{{/link-to}}</h3>
-    <div class="detail owner">
+    <button class="button" {{action "deductFromWallet" this.rental.rent}}>
       <span>Rent:</span> {{this.rental.rent}}
-    </div>
+    </button>
     <div class="detail type">
       <span>Type:</span> {{rental-property-type this.rental.category}} - {{this.rental.category}}
     </div>
